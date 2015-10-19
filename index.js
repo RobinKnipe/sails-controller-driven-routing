@@ -72,16 +72,7 @@ module.exports = function (sails) {
 
         // map the exposed methods of the controller
         _.each(config.exposedMethods, function (method) {
-          var endpoint = method != 'index' ? method : '';
-
-          if (controller[method] !== undefined) {
-            sails.log.silly('Binding ' + baseRoute + "/" + endpoint + ' to ' + controllerId + '.' + method);
-            sails.router.bind(baseRoute + "/" + endpoint, {
-              controller: controllerId,
-              action: method
-            });
-          }
-          ;
+          var endpoint = method != 'index' ? method : '';         
           //handle the verbs
           _.each(http_verbs, function (verb) {
             var candidateMethod = method + verb;
@@ -93,8 +84,14 @@ module.exports = function (sails) {
                 action: candidateMethod
               });
             }
-            ;
           });
+          if (controller[method] !== undefined) {
+            sails.log.silly('Binding ' + baseRoute + "/" + endpoint + ' to ' + controllerId + '.' + method);
+            sails.router.bind(baseRoute + "/" + endpoint, {
+              controller: controllerId,
+              action: method
+            });
+          }
         });
       });
     }
