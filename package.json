@@ -12,8 +12,14 @@
   },
   "author": "",
   "license": "GPL-2.0",
+  "sails": {
+    "isHook": true
+  },
   "bugs": {
     "url": "https://github.com/chrisns/sails-controller-driven-routing/issues"
   },
-  "homepage": "https://github.com/chrisns/sails-controller-driven-routing#readme"
+  "homepage": "https://github.com/chrisns/sails-controller-driven-routing#readme",
+  "dependencies": {
+    "lodash": "^3.10.1"
+  }
 }
