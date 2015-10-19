@@ -1,0 +1,19 @@
+{
+  "name": "sails-controller-driven-routing",
+  "version": "1.0.0",
+  "description": "A routing configuration similar to blueprint that reads the routes from the controller so everything is kept in one place",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chrisns/sails-controller-driven-routing.git"
+  },
+  "author": "",
+  "license": "GPL-2.0",
+  "bugs": {
+    "url": "https://github.com/chrisns/sails-controller-driven-routing/issues"
+  },
+  "homepage": "https://github.com/chrisns/sails-controller-driven-routing#readme"
+}
