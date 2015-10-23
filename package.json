@@ -1,16 +1,16 @@
 {
   "name": "sails-controller-driven-routing",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A routing configuration similar to blueprint that reads the routes from the controller so everything is kept in one place",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/chrisns/sails-controller-driven-routing.git"
   },
-  "author": "",
+  "author": {
+    "name": "Chris Nesbitt-Smith",
+    "email": "chris@cns.me.uk"
+  },
   "license": "GPL-2.0",
   "sails": {
     "isHook": true
@@ -21,5 +21,20 @@
   "homepage": "https://github.com/chrisns/sails-controller-driven-routing#readme",
   "dependencies": {
     "lodash": "^3.10.1"
+  },
+  "devDependencies": {
+    "chai": "1.x.x",
+    "chai-passport-strategy": "0.1.x",
+    "coveralls": "^2.11.4",
+    "istanbul": "^0.4.0",
+    "mocha": "1.x.x",
+    "mocha-lcov-reporter": "^1.0.0"
+  },
+  "engines": {
+    "node": ">= 0.4.0"
+  },
+  "scripts": {
+    "test": "./node_modules/.bin/istanbul cover _mocha",
+    "coveralls": "cat ./coverage/lcov.info | ./node_modules/.bin/coveralls"
   }
 }

@@ -1,4 +1,9 @@
 # sails-controller-driven-routing
+
+[![Build](https://travis-ci.org/chrisns/sails-controller-driven-routing.png)](https://travis-ci.org/chrisns/sails-controller-driven-routing)
+[![Coverage](https://coveralls.io/repos/chrisns/sails-controller-driven-routing/badge.png)](https://coveralls.io/r/chrisns/sails-controller-driven-routing)
+[![Quality](https://codeclimate.com/github/chrisns/sails-controller-driven-routing.png)](https://codeclimate.com/github/chrisns/sails-controller-driven-routing)
+[![Dependencies](https://david-dm.org/chrisns/sails-controller-driven-routing.png)](https://david-dm.org/chrisns/sails-controller-driven-routing)
 A routing configuration similar to blueprint that reads the routes from the controller so everything is kept in one place
 
 It relies on blueprints validating your configuration (because I didn't want to copy/paste), but you could maybe disable blueprints entirely in production if you're feeling courageous and don't need any of its helpers.

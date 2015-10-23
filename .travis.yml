@@ -1,0 +1,15 @@
+language: node_js
+node_js:
+  - 0.12.0
+  - 4.1.1
+  - stable
+after_success:
+  - npm run coveralls
+deploy:
+  provider: npm
+  email: chris@cns.me.uk
+  api_key:
+    secure: Ss2BpQAAy+I6EL3x9RCwfLTDJNVkC39/Dv0cOoIMxJAEbohy2uWMzWh6voCcN3gLwYiVg/v0vrzrhyGLfHzMquqbYbtLrRJtKPuzLKQF7YqYNdFzEwMl70I18Ia9czrdPXv8pxlvJcsFX0nHQilBjC9CevorJY6Fx59JE877f+889beb90oI4ZdKBncPT1thwb9J+Yl4eTtkDrMo84nZJmZ9JvFDgh4Dnts0sZlbyFaQDv3o+7kdMfpRuiRidLUroqev+IUFlbTdj+3tEeiWa3RubwxZKaAeYyNfuae8ujFZdu/5ruQ/WuAK0C/0vlQgF0viEtckRZgOl9HLCg7JLapoyXa7Qmn/ersWjrW9LR2puZibFlCVYHEZnPjJQPG/y2beszNfCGID+kNSU4L9gC3BoYI+UjBA+kQlldlj5J4V/LCSg2UsTwmdVQFJ8pXN9LN+VZZEUP2cRRXcvU/MaZ3J+hPqCaSCIHEbISX4J4ZjiyPgVfgyWxhgSYH4OwCv6eCJSSKy0X0z9RIu0vJpZH4/tzo1/sM6eF1jL3c+uSwGLLfXqaEYyDSpCCSY0U7PzRbP8C5Yku7gP6H0MBVBLMQQEk0AWQ+S12v9FLREOuCtkQqkqOC9uy5SJXHT2epkOX3Y/HnBsD/bs7TrVa6Jp3M5sDyPsTVZiD6nQynxILg=
+  on:
+    repo: chrisns/sails-controller-driven-routing
+    all_branches: true
