@@ -5,11 +5,14 @@ node_js:
   - stable
 after_success:
   - npm run coveralls
+before_deploy:
+  - npm --no-git-tag-version version 1.0.$TRAVIS_BUILD_NUMBER
 deploy:
   provider: npm
   email: chris@cns.me.uk
   api_key:
-    secure: Ss2BpQAAy+I6EL3x9RCwfLTDJNVkC39/Dv0cOoIMxJAEbohy2uWMzWh6voCcN3gLwYiVg/v0vrzrhyGLfHzMquqbYbtLrRJtKPuzLKQF7YqYNdFzEwMl70I18Ia9czrdPXv8pxlvJcsFX0nHQilBjC9CevorJY6Fx59JE877f+889beb90oI4ZdKBncPT1thwb9J+Yl4eTtkDrMo84nZJmZ9JvFDgh4Dnts0sZlbyFaQDv3o+7kdMfpRuiRidLUroqev+IUFlbTdj+3tEeiWa3RubwxZKaAeYyNfuae8ujFZdu/5ruQ/WuAK0C/0vlQgF0viEtckRZgOl9HLCg7JLapoyXa7Qmn/ersWjrW9LR2puZibFlCVYHEZnPjJQPG/y2beszNfCGID+kNSU4L9gC3BoYI+UjBA+kQlldlj5J4V/LCSg2UsTwmdVQFJ8pXN9LN+VZZEUP2cRRXcvU/MaZ3J+hPqCaSCIHEbISX4J4ZjiyPgVfgyWxhgSYH4OwCv6eCJSSKy0X0z9RIu0vJpZH4/tzo1/sM6eF1jL3c+uSwGLLfXqaEYyDSpCCSY0U7PzRbP8C5Yku7gP6H0MBVBLMQQEk0AWQ+S12v9FLREOuCtkQqkqOC9uy5SJXHT2epkOX3Y/HnBsD/bs7TrVa6Jp3M5sDyPsTVZiD6nQynxILg=
+    secure: MevJRVgA3bU93wQDNit8Hgdvau+uDgeyOq1TVxUcSIVqjg3rGqwMgW12jmxSS02Um0n2OaguJ9xPt6ggqPQlhntyl11jLFmqEKLMNaZSRgwRkojLeOW6/pmykoRvL8EJDG+iS9j652Ez6bd8JVJN4aMkgeTIjfBx5qDjvxqdmpCbR8uhzPY3sOhXmEQGCHz0clSzO/aP4wEmiJNDLd4B2seGV+XBPdvom6WR+53K+Qr18Z3QuWzlIGEGGNuD5JMcPcSsT6afmhSBzRMMyRzbyBuVLmsIaVrE+IyBM+co54+XFIDFc0o4rs1WlIzXszobk50SGKtp/El61PtP8ffGEpoDmhEEuGB+z9kiQfdRKCQep5Re2B4k8c9raLKH9/wuufRT/M4/0ASspEGmvByluLDCH3PB11DMuWBvRjeymdY77nUtMkAtAEqNDGAgEynlwQr1YGc3Pq5r5L9LQEUddykm122SC1wb2Fitrc84BpbM6PI072ai/dNgEQDHqRhRE7dB+x8LOddf7y3X9/iTU7we29C61P6QMln1qK0z7cNS4xKOW9qNzCYhpEhc1slIK+SGByS/E7ERXR2l2qhitodnmuX+UlLqlBJoTFxzvjlZFLH1bAecPSPeFRURNycYub/qbcd7PvSiy9aW+pqTABfUDyaumXj9EWLGjjzcS1I=
+  skip_cleanup: true
   on:
-    repo: chrisns/sails-controller-driven-routing
-    all_branches: true
+    branch: master
+    node_js: stable
