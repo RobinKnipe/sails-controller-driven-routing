@@ -72,14 +72,14 @@ module.exports = function (sails) {
 
         // map the exposed methods of the controller
         _.each(config.exposedMethods, function (method) {
-          var endpoint = method != 'index' ? method : '';         
+          var endpoint = method != 'index' ? "/" + method : '';
           //handle the verbs
           _.each(http_verbs, function (verb) {
             var candidateMethod = method + verb;
             // handle special case for index
             if (controller[candidateMethod] !== undefined) {
-              sails.log.silly('Binding ' + verb.toUpperCase() + " " + baseRoute + "/" + endpoint + ' to ' + controllerId + '.' + candidateMethod);
-              sails.router.bind(verb.toUpperCase() + " " + baseRoute + "/" + endpoint, {
+              sails.log.silly('Binding ' + verb.toUpperCase() + " " + baseRoute + endpoint + ' to ' + controllerId + '.' + candidateMethod);
+              sails.router.bind(verb.toUpperCase() + " " + baseRoute + endpoint, {
                 controller: controllerId,
                 action: candidateMethod
               });
