@@ -11,7 +11,7 @@
     "name": "Chris Nesbitt-Smith",
     "email": "chris@cns.me.uk"
   },
-  "license": "GPL-2.0",
+  "license": "MIT",
   "sails": {
     "isHook": true
   },
