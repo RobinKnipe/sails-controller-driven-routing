@@ -1,5 +1,7 @@
 # sails-controller-driven-routing
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/chrisns/sails-controller-driven-routing.svg)](https://greenkeeper.io/)
+
 [![Build](https://travis-ci.org/chrisns/sails-controller-driven-routing.png)](https://travis-ci.org/chrisns/sails-controller-driven-routing)
 [![Coverage](https://coveralls.io/repos/chrisns/sails-controller-driven-routing/badge.png)](https://coveralls.io/r/chrisns/sails-controller-driven-routing)
 [![Quality](https://codeclimate.com/github/chrisns/sails-controller-driven-routing.png)](https://codeclimate.com/github/chrisns/sails-controller-driven-routing)
